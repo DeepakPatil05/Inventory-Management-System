@@ -81,7 +81,7 @@ export default function Features() {
                   alt="Features Image"
                   className="w-3/5 hover:scale-125 duration-500"
                 />
-                <p className="font-serif font-bold text-black">Databse</p>
+                <p className="font-serif font-bold text-black">Database</p>
               </div>
               <div className="w-[24%] h-[300px] px-3 gap-2 flex-col flex-shrink-0 bg-[#D9D9D980] border-2 border-gray-700 text-center flex items-center justify-center text-2xl rounded-xl">
                 <img

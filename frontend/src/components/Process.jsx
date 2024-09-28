@@ -7,20 +7,21 @@ import receipt from "/Process/receiptDownload.png";
 
 export default function Process() {
   return (
+    <div className="">
     <div
-      className="bg-cover bg-center w-full min-h-screen pt-12"
+      className="bg-cover bg-center w-full min-h-screen"
       style={{ backgroundImage: `url(${bg})` }}
     >
-      <div className="flex flex-col justify-start pt-16 md:pt-20 pl-8 md:pl-16">
+      {/* Header Section */}
+      <div className="flex flex-col justify-start items-start pt-12 md:pt-16 px-8 md:px-16">
         <p className="text-3xl md:text-5xl font-inknut font-bold">Process</p>
-        <p className="text-xl md:text-2xl tracking-wider font-bold">
-          Hardware Inventory Management
+        <p className="text-lg md:text-2xl font-bold tracking-wider">
+          Hardware Inventory Management System
         </p>
-        <p className="text-xl md:text-2xl tracking-wider font-bold">System</p>
       </div>
 
       {/* Icons section */}
-      <div className="w-full flex flex-col md:flex-row gap-10 md:gap-5 justify-center items-center pt-10 md:pt-36 px-4">
+      <div className="w-full flex flex-col md:flex-row gap-10 md:gap-5 justify-center items-center pt-10 md:pt-24 px-4">
         {/* Step 1: Login */}
         <div className="flex flex-col items-center gap-5">
           <div className="w-32 h-32 md:w-48 md:h-48 rounded-full bg-[#052F44] flex justify-center items-center relative">
@@ -32,8 +33,8 @@ export default function Process() {
         </div>
 
         {/* Arrow 1 */}
-        <div className="hidden md:flex pt-10">
-          <img src={Arrow} alt="Arrow" className="w-8 md:w-auto" />
+        <div className="flex justify-center items-center pb-8">
+          <img src={Arrow} alt="Arrow" className="w-10 md:w-auto" />
         </div>
 
         {/* Step 2: Create Request */}
@@ -47,8 +48,8 @@ export default function Process() {
         </div>
 
         {/* Arrow 2 */}
-        <div className="hidden md:flex pt-10">
-          <img src={Arrow} alt="Arrow" className="w-8 md:w-auto" />
+        <div className="flex justify-center items-center pb-8">
+          <img src={Arrow} alt="Arrow" className="w-10 md:w-auto" />
         </div>
 
         {/* Step 3: Make Payment */}
@@ -62,8 +63,8 @@ export default function Process() {
         </div>
 
         {/* Arrow 3 */}
-        <div className="hidden md:flex pt-10">
-          <img src={Arrow} alt="Arrow" className="w-8 md:w-auto" />
+        <div className="flex justify-center items-center pb-8">
+          <img src={Arrow} alt="Arrow" className="w-10 md:w-auto" />
         </div>
 
         {/* Step 4: Download Receipt */}
@@ -76,6 +77,7 @@ export default function Process() {
           <p className="text-lg md:text-xl font-bold text-center">Download Receipt</p>
         </div>
       </div>
+    </div>
     </div>
   );
 }
