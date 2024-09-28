@@ -8,71 +8,73 @@ import receipt from "/Process/receiptDownload.png";
 export default function Process() {
   return (
     <div
-      className="bg-cover bg-center w-full h-screen"
+      className="bg-cover bg-center w-full min-h-screen pt-12"
       style={{ backgroundImage: `url(${bg})` }}
     >
-      <div className="flex flex-col justify-start pt-20 pl-16">
-        <p className="text-5xl font-inknut font-bold ">Process</p>
-        <p className="text-2xl tracking-wider font-bold">
+      <div className="flex flex-col justify-start pt-16 md:pt-20 pl-8 md:pl-16">
+        <p className="text-3xl md:text-5xl font-inknut font-bold">Process</p>
+        <p className="text-xl md:text-2xl tracking-wider font-bold">
           Hardware Inventory Management
         </p>
-        <p className="text-2xl tracking-wider font-bold">System</p>
+        <p className="text-xl md:text-2xl tracking-wider font-bold">System</p>
       </div>
 
-      <div className="w-full flex flex-row gap-5 justify-center items-center pt-36">
-        <div className="flex flex-col gap-7">
-          <div className="flex flex-row justify-center gap-3">
-            <div className="w-60 h-60 rounded-full bg-[#052F44] flex items-center">
-              <div className="w-44 h-44 ml-8 rounded-full bg-[#d3eaff] flex items-center">
-                <img src={Login} alt="Login" className="w-32 ml-6" />
-              </div>
-            </div>
-            <div className="pt-[6.5rem]">
-              <img src={Arrow} alt="Arrow" className="" />
+      {/* Icons section */}
+      <div className="w-full flex flex-col md:flex-row gap-10 md:gap-5 justify-center items-center pt-10 md:pt-36 px-4">
+        {/* Step 1: Login */}
+        <div className="flex flex-col items-center gap-5">
+          <div className="w-32 h-32 md:w-48 md:h-48 rounded-full bg-[#052F44] flex justify-center items-center relative">
+            <div className="w-24 h-24 md:w-32 md:h-32 rounded-full bg-[#d3eaff] flex justify-center items-center">
+              <img src={Login} alt="Login" className="w-12 md:w-20" />
             </div>
           </div>
+          <p className="text-lg md:text-xl font-bold text-center">Login</p>
         </div>
 
-        <div className="flex flex-col gap-7">
-          <div className="flex flex-row justify-center gap-3">
-            <div className="w-60 h-60 rounded-full bg-[#052F44] flex items-center">
-              <div className="w-44 h-44 ml-8 rounded-full bg-[#d3eaff] flex items-center">
-                <img src={Request} alt="Login" className="w-32 ml-6" />
-              </div>
-            </div>
-            <div className="pt-[6.5rem]">
-              <img src={Arrow} alt="Arrow" className="" />
+        {/* Arrow 1 */}
+        <div className="hidden md:flex pt-10">
+          <img src={Arrow} alt="Arrow" className="w-8 md:w-auto" />
+        </div>
+
+        {/* Step 2: Create Request */}
+        <div className="flex flex-col items-center gap-5">
+          <div className="w-32 h-32 md:w-48 md:h-48 rounded-full bg-[#052F44] flex justify-center items-center relative">
+            <div className="w-24 h-24 md:w-32 md:h-32 rounded-full bg-[#d3eaff] flex justify-center items-center">
+              <img src={Request} alt="Create Request" className="w-12 md:w-20" />
             </div>
           </div>
+          <p className="text-lg md:text-xl font-bold text-center">Create Request</p>
         </div>
-        <div className="flex flex-col gap-7">
-          <div className="flex flex-row justify-center gap-3">
-            <div className="w-60 h-60 rounded-full bg-[#052F44] flex items-center">
-              <div className="w-44 h-44 ml-8 rounded-full bg-[#d3eaff] flex items-center">
-                <img src={Payment} alt="Login" className="w-32 ml-6" />
-              </div>
-            </div>
-            <div className="pt-[6.5rem]">
-              <img src={Arrow} alt="Arrow" className="" />
-            </div>
-          </div>
+
+        {/* Arrow 2 */}
+        <div className="hidden md:flex pt-10">
+          <img src={Arrow} alt="Arrow" className="w-8 md:w-auto" />
         </div>
-        <div className="flex items-center flex-col gap-7">
-          <div className="w-60 h-60 rounded-full bg-[#052F44] flex items-center">
-            <div className="w-44 h-44 ml-8 rounded-full bg-[#d3eaff] flex items-center">
-              <img src={receipt} alt="Login" className="w-32 ml-6" />
+
+        {/* Step 3: Make Payment */}
+        <div className="flex flex-col items-center gap-5">
+          <div className="w-32 h-32 md:w-48 md:h-48 rounded-full bg-[#052F44] flex justify-center items-center relative">
+            <div className="w-24 h-24 md:w-32 md:h-32 rounded-full bg-[#d3eaff] flex justify-center items-center">
+              <img src={Payment} alt="Make Payment" className="w-12 md:w-20" />
             </div>
           </div>
+          <p className="text-lg md:text-xl font-bold text-center">Make Payment</p>
         </div>
-      </div>
-      <div className="flex flex-row justify-start ml-36 pt-6 gap-48">
-        <p className="text-2xl text-wrap font-bold">Login</p>
-        <p className="text-2xl text-wrap font-bold pl-24">Create Request</p>
-        <p className="text-2xl text-wrap font-bold pl-6">Make Payment</p>
-        <p className="text-2xl text-wrap font-bold">
-          Download Payment
-          <p className="text-center">Receipt</p>
-        </p>
+
+        {/* Arrow 3 */}
+        <div className="hidden md:flex pt-10">
+          <img src={Arrow} alt="Arrow" className="w-8 md:w-auto" />
+        </div>
+
+        {/* Step 4: Download Receipt */}
+        <div className="flex flex-col items-center gap-5">
+          <div className="w-32 h-32 md:w-48 md:h-48 rounded-full bg-[#052F44] flex justify-center items-center relative">
+            <div className="w-24 h-24 md:w-32 md:h-32 rounded-full bg-[#d3eaff] flex justify-center items-center">
+              <img src={receipt} alt="Download Receipt" className="w-12 md:w-20" />
+            </div>
+          </div>
+          <p className="text-lg md:text-xl font-bold text-center">Download Receipt</p>
+        </div>
       </div>
     </div>
   );
